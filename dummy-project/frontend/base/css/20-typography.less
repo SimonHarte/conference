@@ -1,0 +1,123 @@
+/**
+ * "such.less" CSS boilerplate framework
+ * 20-typography.less
+ * https://github.com/MarcDiethelm/such.less
+ * License: MIT
+ * Copyright 2014 Marc Diethelm, Simon Harte
+ */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BASE TYPOGRAPHY
+
+// Dependencies:
+// - 00-variables.less
+
+#type {
+	// set default variables, overwrite in sub bundles if needed
+	@font-family    : @font-default;
+	@font-weight    : normal;
+	@color          : inherit;
+
+	// optimised text rendering
+	.rendering(@_) {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	#title {
+		@font-family: @font-title;
+
+		.style() {
+			font-family: @font-family;
+			font-weight: @font-weight;
+			color: @color;
+		}
+		
+		// applies to all below //
+		.size(@_) {
+			&:extend(.class-title);
+		}
+
+		.size('copy') {
+			font-size: 15px;
+			line-height: 20px;
+		}
+
+		.size('default') {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		.size('lead') {
+			font-size: 22px;
+			line-height: 28px;
+		}
+		
+		.size('page') {
+			font-size: 28px;
+			line-height: 34px;
+		}
+
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	#copy {
+		.style() {
+			font-family: @font-family;
+			font-weight: @font-weight;
+			color: @color;
+		}
+		
+		// applied to all below //
+		.size(@_) {
+			&:extend(.class-copy);
+		}
+
+		.size('default', ...) {
+			font-size: 15px;
+			line-height: 18px;
+		}
+
+		.size('small', ...) {
+			font-size: 13px;
+			line-height: 16px;
+		}
+
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	#link {
+		@color: @color-link;
+		
+		// applies to all below //
+		.style(@_) {
+			color: @color;
+			text-decoration: none;
+		}
+
+		.style('default') {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.style('hilited') {
+			&:hover {
+				text-decoration: none;
+				color: hotpink;
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BASE TYPO STYLE CLASSES TO EXTEND
+
+.class-title {
+	#type > #title > .style;
+}
+
+.class-copy {
+	#type > #copy > .style;
+}

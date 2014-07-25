@@ -1,0 +1,78 @@
+// Dependencies:
+// - 00-variables.less
+// - lib/wireframe.less
+
+html {
+	#type > .rendering('antialiased');
+	font-size: 62.5%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+body:extend(.copy-default) {
+	#layout > .content-boundaries(@min-content-width, @max-content-width);
+	#layout > .center();
+	.visual-viewports(); // Remove for production
+	background: @color-bg-body;
+	color: @color-copy;
+	padding: 0 (@h-spacing*.5);
+	overflow: hidden;
+	
+	@media @m-medium-up {
+		padding: 0 @h-spacing;
+	}
+}
+
+// GRID
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@grid-config: @grid-type, @max-content-width, @grid-gutter, @gutter-type, @grid-cols;
+
+.grid-bundle(@config: @grid-config);
+
+// TYPOGRAPHY
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.title-page {
+	#type > #title > .size('lead');
+	
+	@media @m-medium-up {
+		#type > #title > .size('page');
+	}
+}
+
+.title-lead {
+	#type > #title > .size('default');
+	
+	@media @m-medium-up {
+		#type > #title > .size('lead');
+	}
+}
+
+.title-default {
+	#type > #title > .size('copy');
+	
+	@media @m-large {
+		#type > #title > .size('default');
+	}
+}
+
+.copy-default {
+	#type > #copy > .size('small');
+	
+	@media @m-medium-up {
+		#type > #copy > .size('default');
+	}
+}
+
+.copy-small {
+	#type > #copy > .size('small');
+}
+
+.link-default {
+	#type > #link > .style('default');
+}
+
+a {
+	&:extend(.link-default all);
+}

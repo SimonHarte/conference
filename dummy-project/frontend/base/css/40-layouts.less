@@ -68,53 +68,8 @@
 	* desktop: 6
 	**/
 
-	@media @m-large {
-		.grid-col-set-equal(6);
-	}
-}
-
-.g-layout-3 {
-	/**
-	* phone: 12
-	* tablet: 8/4
-	* desktop: 8/4
-	**/
-
 	@media @m-medium-up {
-		.grid-col-set(col-1, 8);
-		.grid-col-set(col-2, 4);
-	}
-}
-
-.g-layout-4 {
-	/**
-	* phone: 12
-	* tablet: 6
-	* desktop: 3
-	**/
-
-	@media @m-medium {
 		.grid-col-set-equal(6);
-	}
-
-	@media @m-large {
-		.grid-col-set-equal(3);
-	}
-}
-
-.g-nogrid-1 {
-	/**
-	* phone: 5
-	* tablet: 7
-	* desktop: 9
-	**/
-
-	@media @m-medium-down {
-		.grid-col-set(col, @grid-cols / 5);
-	}
-
-	@media @m-large {
-		.grid-col-set(col, @grid-cols / 7);
 	}
 }
 

@@ -117,3 +117,21 @@
 		.grid-col-set(col, @grid-cols / 7);
 	}
 }
+
+.g-layout-header {
+	.grid-row-reorder();
+	
+	@media @m-small {
+		.grid-col-set(col-1, 2, 0, 10);
+		.grid-col-set(col-2, 2, 0, -2);
+		.grid-col-set(col-3, 5, 0, -2);
+		.grid-col-set(col-4, 3, 0, -2);
+	}
+	
+	@media @m-medium-up {
+		.grid-col-set(col-1, 2);
+		.grid-col-set(col-2, 6);
+		.grid-col-set(col-3, 2);
+		.grid-col-set(col-4, 2);
+	}
+}

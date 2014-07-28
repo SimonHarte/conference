@@ -1,4 +1,0 @@
-# syntax: http://git-scm.com/docs/gitignore
-
-*.less
-!sprites-helper.less

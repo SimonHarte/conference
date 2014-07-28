@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
 	/**
 	 * JsViewports module implementation.
 	 *
@@ -18,12 +18,12 @@
 		 * @param {Sandbox} sandbox the sandbox to get the resources from
 		 * @param {String} modId the unique module id
 		 */
-		init: function($ctx, sandbox, modId) {
+		init: function ($ctx, sandbox, modId) {
 			// call base constructor
 			this._super($ctx, sandbox, modId);
-			
+
 			this.subscribe('media');
-			
+
 			this.$viewportDisplay = this.$$('.js-viewport');
 		},
 
@@ -34,7 +34,7 @@
 		 * @param {Function} callback function
 		 * @return void
 		 */
-		on: function(callback) {
+		on: function (callback) {
 			callback();
 		},
 
@@ -44,22 +44,22 @@
 		 * @method after
 		 * @return void
 		 */
-		after: function() {
+		after: function () {
 		},
-		
+
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CONNECTOR CALLBACKS
 
-		onViewportChange: function(data) {
-			if(data.state == 'match') {
+		onViewportChange: function (data) {
+			if (data.state == 'match') {
 				this.setViewportText(data.query.name);
 			}
 		},
-		
+
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// METHODS
-		
-		setViewportText: function(name) {
+
+		setViewportText: function (name) {
 			this.$viewportDisplay.text(name);
 		}
 	});

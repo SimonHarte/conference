@@ -28,7 +28,9 @@ body:extend(.copy-default) {
 
 @grid-config: @grid-type, @max-content-width, @grid-gutter, @gutter-type, @grid-cols;
 
-.grid-bundle(@config: @grid-config);
+.grid-core();
+.grid-unlock(@grid-config);
+.grid-generate();
 
 // TYPOGRAPHY
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

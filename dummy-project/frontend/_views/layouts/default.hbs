@@ -52,9 +52,9 @@
 </footer>
 
 {{#env "production"}}
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>{{/env}}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>{{/env}}
 {{#env "development"}}
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>{{/env}}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js"></script>{{/env}}
 <script>
 		{{inline "js" indent=2}}{{!-- inline js. the key is defined in config.js --}}
 </script>

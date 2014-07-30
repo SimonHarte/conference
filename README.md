@@ -31,7 +31,7 @@ noch nicht oder es gibt eine einfachere CSS Lösung.
 
 ### Schone die Hardware
 
-Ein zentraler Punkt beim Mobile First ist die Effizienz, sie bezieht sich vor allem auf die 
+Ein zentraler Punkt bei Mobile First fürs Frontend ist die Effizienz, sie bezieht sich vor allem auf die 
 Ladegeschwindigkeit und den Stromverbrauch der Webseite. Diese Punkte können mit zwei Stichworten behandelt 
 werden: **tiny** und **CSS**. Gemeint ist hier zum einen CSS statt Javascript zu verwenden wenn immer möglich (und es
  ist öfters möglich als man vielleicht denkt) und wenn Javascript genutzt wird, auf die möglichst kleinste Library 
@@ -50,14 +50,15 @@ kleinstmöglichen Container? bei einer solchen Diskussion schon von "Small", "Me
 hilft, von dem üblichen Device-Denken wegzukommen und die Breakpoints wirklich Inhaltsbezogen zu definieren. Wird es 
 ein Dreispalter in Tablet-Landscape oder bleibt es über Tablet Grössen immer ein Zweispalter? Unwichtig wenn es nur 
 darum geht, dass der Content immer gut dargestellt wird! Das relevante Stichwort hier ist Line Length, 
-nicht Device Verhalten. [Readability](http://baymard.com/blog/line-length-readability)
+also Readability, nicht Device Verhalten.
+[Readability](http://baymard.com/blog/line-length-readability)
 
 ### EM based Queries
 
 Der wichtigste Punkt beim Aufsetzen der Breakpoints im Frontend ist nun, EM anstatt Pixel für die Angaben zu nutzen. 
-Auf den ersten Blick ändert sich rein gar nichts. Wenn man die korrekten EM Werte nimmt, 
+Auf den ersten Blick ändert sich rein gar nichts, wenn man die korrekten EM Werte nimmt, 
 bleiben die Breakpoints an der gleichen Pixelstelle. Der Vorteil ist jedoch, dass EM basierte Media Queries auf 
 Textzoom reagieren und sich Viewports dementsprechend verändern. Wenn der Textzoom also gross genug ist, 
-wechselt der Browser automatisch von z.B. Medium auf Small Screen und somit erfüllen wir wieder den Ansatz "Think 
-Content, not Devices", da wir ja nicht wissen können, ob ein Endgerät möglicherweise einen standard Textzoom 
-voreingestellt oder vom User manuell gesetzt bekommen hat. [EMs have it](http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/)
+wechselt der Browser automatisch von z.B. Medium auf Small Screen während der Viewport gleich bleibt und somit erfüllen 
+wir wieder den Ansatz "Think Content, not Devices".
+[EMs have it](http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/)

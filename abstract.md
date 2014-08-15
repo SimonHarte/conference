@@ -1,3 +1,11 @@
+## About Me
+
+- sharte
+- Seit 3 Jahren bei Namics 13
+- Seit zwei Jahren responsive Projekte
+- Entwickler des Spartan Grid
+- Mitentwickler von such.less
+
 ## Themen
 
 - Kurzes Summary: was bedeutet responsive?

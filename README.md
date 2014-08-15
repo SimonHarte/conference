@@ -8,7 +8,7 @@ ist für jedes Endgerät (und damit sind nicht einfach Smartphone, Tablet & Desk
 auszuliefern, ansprechend zu präsentieren und in jedem Anwendungsfall gleichermassen Zugänglich zu machen.
 
 Mit dem falschen Ansatz fängt man an, über die Viewports hinweg hier Elemente auszublenden und dort Duplikate wieder 
-einzublenden. Der grösste Fehler in responsive Webentwicklung ist meiner Meinung nach duplizierter Inhalt, 
+einzublenden. Der grösste Fehler in responsive Webentwicklung ist meiner Meinung nach jedoch duplizierter Inhalt, 
 denn in praktisch jedem Fall lässt sich das auf ein inkonsistentes Konzept zurückführen - früher oder später 
 generiert das Mehraufwand und vor allem Kopfschmerzen beim Frontend Engineer. Unsere Aufgabe ist es deshalb, 
 schon in dieser Phase auf unschlüssige Layout Changes hinzuweisen und diese mit dem Konzepter zu überarbeiten. Das 
@@ -18,12 +18,11 @@ Konzept wird automatisch besser und die Arbeit im Frontend einfacher und effizie
 
 Eigentlich stört schon der Begriff "Mobile" hier, denn mobil ist heutzutage die Mehrheit von Endgeräten, 
 zudem impliziert es auch gewisse Features wie z.B. Touchfähigkeit. "Small Screen" ist treffender, 
-weil es konzeptuell zuerst mal um die Anordnung der Elemente im "kleinsten zu erwartenden" Screen geht.
+weil es konzeptionell zuerst mal um die Anordnung der Elemente im "kleinsten zu erwartenden" Screen geht.
 
 Wenn wir "Mobile First" machen, schauen wir uns den kleinsten vom Design gegebenen Screen an und strukturieren das 
-HTML dementsprechend - während wir ein Auge auf eine sinnvolle Seitenstruktur halten. Wenn wir einen 
-kompletten Bruch dieser Struktur in einem anderen Screen entdecken, muss das Layout überdacht werden (und zwar in den
- grösseren Viewports).
+Markup dementsprechend. Wenn wir einen kompletten Bruch dieser Struktur in einem anderen Screen entdecken, 
+muss das Layout überdacht werden (und zwar erst in den grösseren Viewports).
 
 Ist die Struktur gegeben, erstellen wir die Viewport abhängigen Layouts mit CSS. Falls es so aussieht, 
 dass irgendwo Inhalt dupliziert oder mit Javascript verschoben werden müsste, stimmt ganz einfach etwas mit dem Konzept 
@@ -33,10 +32,10 @@ noch nicht oder es gibt eine einfachere CSS Lösung.
 
 Ein zentraler Punkt bei Mobile First fürs Frontend ist die Effizienz, sie bezieht sich vor allem auf die 
 Ladegeschwindigkeit und den Stromverbrauch der Webseite. Diese Punkte können mit zwei Stichworten behandelt 
-werden: **tiny** und **CSS**. Gemeint ist hier zum einen CSS statt Javascript zu verwenden wenn immer möglich (und es
- ist öfters möglich als man vielleicht denkt) und wenn Javascript genutzt wird, auf die möglichst kleinste Library 
- zurückzugreifen. Ein Beispiel für "tiny" Javascript wäre zum Beispiel die Plugins von Twitter Bootstrap statt jQuery
-  UI zu verwenden. Diese sind zum einen kleiner in der Datenmenge und nutzen meist CSS Animationen statt Javascript.
+werden: **tiny** und **CSS**. Gemeint ist hier zum einen CSS statt Javascript zu verwenden wenn immer möglich und 
+wenn Javascript genutzt wird, auf die möglichst kleinste Library zurückzugreifen. Ein Beispiel für "tiny" Javascript 
+wäre zum Beispiel die Plugins von Twitter Bootstrap statt jQuery UI zu verwenden. Diese sind zum einen kleiner in der
+ Datenmenge und nutzen meist CSS Animationen statt Javascript.
 
 ## Think Content, not Devices
 
@@ -46,7 +45,7 @@ er wählt Typographie Strukturen und entsprechend eine Aufteilung des Inhalts.
 
 Es macht Sinn, die Breakpoints in einem Projekt zusammen mit dem Designer zu besprechen und ihn wiederum auch zu 
 Challengen. Wie sieht ein gegebener Inhalt in einem für diesen Viewport grösstmöglichen Container aus? Was passiert im 
-kleinstmöglichen Container? bei einer solchen Diskussion schon von "Small", "Medium" und "Large" Screens zu sprechen 
+kleinstmöglichen Container? Bei einer solchen Diskussion schon von "Small", "Medium" und "Large" Screens zu sprechen 
 hilft, von dem üblichen Device-Denken wegzukommen und die Breakpoints wirklich Inhaltsbezogen zu definieren. Wird es 
 ein Dreispalter in Tablet-Landscape oder bleibt es über Tablet Grössen immer ein Zweispalter? Unwichtig wenn es nur 
 darum geht, dass der Content immer gut dargestellt wird! Das relevante Stichwort hier ist Line Length, 
